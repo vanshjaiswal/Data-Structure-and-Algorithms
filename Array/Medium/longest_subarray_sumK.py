@@ -62,13 +62,13 @@ https://takeuforward.org/data-structure/longest-subarray-with-given-sum-k/
 
 """
 
-def largest_subarray(nums, k):
+def largest_subarray_dict(nums, k):
     prefix_dict = {}
     prefix_sum = 0
     largest = 0
 
     for i in range(len(nums)):
-        #check if the sum already exist then do not update it since we may zero which can be the part of longest subarray but if we update the presum then index will be updated and we will not get the correct result 
+        #check if the sum already exist then do not update it since we may have zero which can be the part of longest subarray but if we update the presum then index will be updated and we will not get the correct result 
         
         prefix_sum += nums[i]
         if prefix_sum not in prefix_dict.keys():
@@ -110,4 +110,4 @@ def longest_subarray(nums,k):
         if right < n: Sum += a[right]
 
     return maxLen
-print(largest_subarray([3,4,2,3,1,2], 3))  
+print(largest_subarray_dict([3,4,2,3,1,2], 3))  
