@@ -34,6 +34,23 @@ class Solution:
             ans.append(level)  
         return ans, len(ans), count
 
+
+    def recursive_depth(self, root):
+        """
+        We can also find the depth of the binary tree using a recursive approach
+        we have check for 1 + max(LH, RH) for every node. At the root node this 
+        will eventually gives us the height of the binary tree.
+        
+        """
+        if root is None:
+            return 0
+        
+        LH = self.recursive_depth(root.left)
+        RH = self.recursive_depth(root.right)
+
+        return 1 + max(LH, RH)
+
+
 # Creating a sample binary tree
 if __name__ == "__main__":
     root = Node(1)
@@ -47,7 +64,11 @@ if __name__ == "__main__":
     solution = Solution()
     ans, arr_len, depth = solution.height_binary_tree(root)
 
+    recursive_ans = solution.recursive_depth(root)
+
 
 print(ans)
 print(arr_len)
 print(depth)
+
+print("Recursive: ", recursive_ans)
