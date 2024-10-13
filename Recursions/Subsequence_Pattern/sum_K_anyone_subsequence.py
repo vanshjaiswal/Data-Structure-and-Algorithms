@@ -58,8 +58,8 @@ class Recursion:
 solution = Recursion()
 counter = solution.count([1,2,1,3,4,5], 5)
 print(counter)
-ans=solution.driver([1,2,1],2)
-print(ans)
+# ans=solution.driver([1,2,1],2)
+# print(ans)
 
 counter = solution.count([1,2,1], 2)
 print(counter)

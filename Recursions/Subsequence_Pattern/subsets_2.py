@@ -12,7 +12,7 @@ class Solution:
             intermediate.remove(nums[i])
         return output
 
-    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+    def subsetsWithDup(self, nums):
         output = []
         intermediate = []
         index = 0
@@ -23,3 +23,6 @@ class Solution:
         # output = list([list(i) for i in output])
         return output
         
+sol = Solution()
+ans = sol.subsetsWithDup([1,2,1])
+print(ans)

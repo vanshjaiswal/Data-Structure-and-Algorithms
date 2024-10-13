@@ -5,10 +5,10 @@ class Recursion:
             return
         if target==0:
             output.append(intermediate.copy())
-       
-        if arr[index] <= target:
+        #pick
+        if arr[index] <= target:  #2 <= 1 ------ [2,2,2], 1
             intermediate.append(arr[index])
-            print(intermediate, target)
+            # print(intermediate, target)
             self.combination_sum(index, arr, target-arr[index], intermediate, output)
             intermediate.pop()
             target +=arr[index]

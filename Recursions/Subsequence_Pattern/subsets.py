@@ -13,6 +13,7 @@ class Iter:
     def subset_generation(self,index, arr, intermediate_list, output):
         if index >= len(arr):
             return output.append(intermediate_list.copy())
+      
 
         # take
         intermediate_list.append(arr[index])
@@ -27,10 +28,25 @@ class Iter:
         return output
 
 
+    def subsets(self,arr):
+        output = []
+        intermediate_list=[]
+        index=0
+        if arr==[]:
+            return output
+        
+        self.subset_generation(index, arr, intermediate_list, output)
+        return output
+
+
+
+
+
 
     def subset_generation2(self,index, arr, intermediate_list, output):
         if index >= len(arr):
             output.add(tuple(intermediate_list.copy()))
+            # output.add(intermediate_list.copy())
             return 
         
         intermediate_list.append(arr[index])
@@ -41,15 +57,6 @@ class Iter:
 
         return output
 
-    def subsets(self,arr):
-        output = []
-        intermediate_list=[]
-        index=0
-        if arr==[]:
-            return output
-        
-        self.subset_generation(index, arr, intermediate_list, output)
-        return output
 
     def subsets2(self,arr):
         output = set()
@@ -63,5 +70,5 @@ class Iter:
         return output
 
 sol=Iter()
-arr=[1,2,2]
+arr=[1,2,3]
 print(sol.subsets2(arr))

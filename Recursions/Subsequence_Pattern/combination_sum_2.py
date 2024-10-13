@@ -53,10 +53,10 @@ class Recursion:
 
 if __name__ == "__main__":
     solution = Recursion()
-    arr=[3,4,7,8]
-    target=11
+    # arr=[3,4,7,8]
+    # target=11
 
-    arr=[10,1,2,7,6,1,5]
-    target=8
+    arr=[1,1,1,2,2]#[10,1,2,7,6,1,5]
+    target=4
     ans = solution.driver(arr, target)
     print(ans)
